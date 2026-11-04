@@ -1,0 +1,23 @@
+[project]
+name = "zohal-gateway"
+version = "1.0.0"
+description = "Multi-provider API gateway with resilience, admission control and an async audit pipeline"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+markers = [
+    "integration: needs the docker compose stack (or REDIS_URL) running",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "ASYNC", "SIM", "RUF"]
+ignore = ["RUF001", "RUF002", "RUF003"]

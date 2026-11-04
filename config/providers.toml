@@ -1,0 +1,44 @@
+# Upstream providers behind POST /v1/process.
+#
+# Adding a provider = one block here (+ one adapter class if its wire format differs).
+# `${VAR:-default}` is expanded from the environment, so pointing at the real hosts is
+# a one-line .env change (e.g. PROVIDER_A_URL=http://92.114.51.251:8001/v1/process).
+#
+# Units: *_ms milliseconds, *_rps requests/second (GLOBAL across all api replicas),
+# max_concurrency is PER api replica (bulkhead).
+
+[providers.A]
+adapter = "generic_json"
+url = "${PROVIDER_A_URL:-http://mock-a:8000/v1/process}"
+expected_latency_ms = 650          # cold-start EWMA seed (documented 300-1000ms)
+connect_timeout_ms = 500
+timeout_ms = 3000                  # per-attempt ceiling; also capped by the request deadline
+rate_limit_rps = "${PROVIDER_A_RPS:-200}"    # optimistic; AIMD discovers the real limit
+rate_limit_min_rps = 10
+rate_limit_burst = 50
+max_concurrency = 500
+supports_idempotency_key = false
+
+[providers.B]
+adapter = "generic_json"
+url = "${PROVIDER_B_URL:-http://mock-b:8000/v1/process}"
+expected_latency_ms = 5500         # documented 1000-10000ms
+connect_timeout_ms = 500
+timeout_ms = 10000
+rate_limit_rps = "${PROVIDER_B_RPS:-1000}"
+rate_limit_min_rps = 50
+rate_limit_burst = 200
+max_concurrency = 4000
+supports_idempotency_key = false
+
+[providers.C]
+adapter = "generic_json"
+url = "${PROVIDER_C_URL:-http://mock-c:8000/v1/process}"
+expected_latency_ms = 5500
+connect_timeout_ms = 500
+timeout_ms = 10000
+rate_limit_rps = "${PROVIDER_C_RPS:-1000}"
+rate_limit_min_rps = 50
+rate_limit_burst = 200
+max_concurrency = 4000
+supports_idempotency_key = false

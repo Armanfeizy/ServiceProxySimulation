@@ -1,0 +1,20 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # DNS service discovery: every replica of `api` is an A record, so
+  # `docker compose up --scale api=N` needs no config change.
+  - job_name: api
+    dns_sd_configs:
+      - names: [api]
+        type: A
+        port: 8000
+        refresh_interval: 5s
+
+  - job_name: audit-consumer
+    dns_sd_configs:
+      - names: [audit-consumer]
+        type: A
+        port: 9100
+        refresh_interval: 5s
