@@ -1,0 +1,186 @@
+{
+  "start_utc": "2026-11-05T12:22:43+00:00",
+  "query_end_epoch": 1793881530,
+  "window_seconds": 167,
+  "provider_attempts_estimate": [
+    {
+      "metric": {
+        "outcome": "success",
+        "provider": "A"
+      },
+      "value": [
+        1793881530,
+        "4574.894916556739"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "success",
+        "provider": "C"
+      },
+      "value": [
+        1793881530,
+        "5414.227659895245"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "success",
+        "provider": "B"
+      },
+      "value": [
+        1793881530,
+        "5274.167832532552"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "rejected",
+        "provider": "C"
+      },
+      "value": [
+        1793881530,
+        "942.9838730317006"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "timeout",
+        "provider": "B"
+      },
+      "value": [
+        1793881530,
+        "356.06153599876933"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "rejected",
+        "provider": "B"
+      },
+      "value": [
+        1793881530,
+        "453.999203341715"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "rate_limited",
+        "provider": "A"
+      },
+      "value": [
+        1793881530,
+        "1220.6886658464425"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "protocol_error",
+        "provider": "B"
+      },
+      "value": [
+        1793881530,
+        "35.025341473091295"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "rate_limited",
+        "provider": "C"
+      },
+      "value": [
+        1793881530,
+        "934.8245651428676"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "rate_limited",
+        "provider": "B"
+      },
+      "value": [
+        1793881530,
+        "237.62039097272014"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "connect_error",
+        "provider": "B"
+      },
+      "value": [
+        1793881530,
+        "48.733801259786745"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "protocol_error",
+        "provider": "C"
+      },
+      "value": [
+        1793881530,
+        "17.912120899588665"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "protocol_error",
+        "provider": "A"
+      },
+      "value": [
+        1793881530,
+        "32.843909936087975"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "connect_error",
+        "provider": "A"
+      },
+      "value": [
+        1793881530,
+        "251.60869307939075"
+      ]
+    },
+    {
+      "metric": {
+        "outcome": "connect_error",
+        "provider": "C"
+      },
+      "value": [
+        1793881530,
+        "263.8911410339273"
+      ]
+    }
+  ],
+  "provider_unavailable_estimate": [
+    {
+      "metric": {
+        "reason": "circuit_open"
+      },
+      "value": [
+        1793881530,
+        "23328.693333738935"
+      ]
+    },
+    {
+      "metric": {
+        "reason": "rate_limited"
+      },
+      "value": [
+        1793881530,
+        "5822.914723328362"
+      ]
+    }
+  ],
+  "max_consumer_lag": [
+    {
+      "metric": {},
+      "value": [
+        1793881530,
+        "49"
+      ]
+    }
+  ]
+}

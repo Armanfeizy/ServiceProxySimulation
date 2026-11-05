@@ -1,0 +1,82 @@
+{
+  "mode": "vps-scale-real-20261105T121847Z-8cpu-16g",
+  "stage_seconds": 25,
+  "stages": [
+    {
+      "offered_rps": 100,
+      "achieved_rps": 100,
+      "requests": 2501,
+      "dropped_iterations": 0,
+      "avg_ms": 1611.2,
+      "p50_ms": 834,
+      "p95_ms": 6277.9,
+      "p99_ms": 9512.2,
+      "error_rate": 15.27,
+      "status": {
+        "200": 2119,
+        "429": 0,
+        "502": 16,
+        "503": 358,
+        "504": 8,
+        "other": 0
+      }
+    },
+    {
+      "offered_rps": 500,
+      "achieved_rps": 500,
+      "requests": 12501,
+      "dropped_iterations": 0,
+      "avg_ms": 1184.5,
+      "p50_ms": 86.5,
+      "p95_ms": 7220.5,
+      "p99_ms": 9951.4,
+      "error_rate": 69.82,
+      "status": {
+        "200": 3773,
+        "429": 0,
+        "502": 204,
+        "503": 8421,
+        "504": 103,
+        "other": 0
+      }
+    },
+    {
+      "offered_rps": 750,
+      "achieved_rps": 748.6,
+      "requests": 18716,
+      "dropped_iterations": 0,
+      "avg_ms": 1454.3,
+      "p50_ms": 299.5,
+      "p95_ms": 7394.7,
+      "p99_ms": 10032.4,
+      "error_rate": 70.64,
+      "status": {
+        "200": 5495,
+        "429": 0,
+        "502": 582,
+        "503": 12499,
+        "504": 140,
+        "other": 0
+      }
+    },
+    {
+      "offered_rps": 1000,
+      "achieved_rps": 1000,
+      "requests": 25000,
+      "dropped_iterations": 0,
+      "avg_ms": 839,
+      "p50_ms": 230.9,
+      "p95_ms": 4179.8,
+      "p99_ms": 9236,
+      "error_rate": 83.52,
+      "status": {
+        "200": 4120,
+        "429": 0,
+        "502": 482,
+        "503": 20289,
+        "504": 109,
+        "other": 0
+      }
+    }
+  ]
+}
